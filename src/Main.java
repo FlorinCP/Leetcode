@@ -4,49 +4,53 @@ import java.util.stream.Stream;
 public class Main {
 
 
-    public List<List<String>> groupAnagrams(String[] strs) {
-        List<List<String>> res = new ArrayList<>();
-        return res;
-    }
-
     public static void main(String[] args) {
-        Map<String, List<String>> map = new HashMap<>();
-        String[] strs = {"eat","tea","tan","ate","nat","bat"};
-        String[] strs2 = new String[strs.length];
-
-        for (int i = 0; i < strs.length; i++) {
-
-            char[] sortedString = strs[i].toCharArray();
-            Arrays.sort(sortedString);
-           // strings.add(String.valueOf(sortedString));
-           // System.out.println(strings);
-            String elem = String.valueOf(sortedString);
-            map.put(elem,new ArrayList<>());
+        int k=2;
+        int [] nums ={1,1,1,2,2,3};
+        // Aici adaugam valorile in hashmap
+       Map<Integer,Integer> bucket = new HashMap<>();
+        for (int num:nums) {
+            // metoda consacrata de a adauga mai multe valori
+            bucket.put(num,bucket.getOrDefault(num,0)+1);
         }
-        for (int i = 0; i < strs.length; i++) {
+        System.out.println(bucket);
 
-            char[] sortedString = strs[i].toCharArray();
-            Arrays.sort(sortedString);
-            strs2[i] = String.valueOf(sortedString);
+        // Aici am schimbat valorile de la o galeata la alta
+        Map<Integer,List> bucket2 = new HashMap<>();
+        for (Integer i: bucket.keySet()) {
+            Integer elemFreq = bucket.get(i);
+            if(!bucket2.containsKey(elemFreq)){
+                bucket2.put(elemFreq,new ArrayList<>());
+            }
+            bucket2.get(elemFreq).add(i);
         }
 
-        for (String s :map.keySet()) {
-            for (int j = 0; j < strs.length; j++) {
-                if(s.equals(strs2[j])){
-                    map.computeIfAbsent(s, k ->new ArrayList<>()).add(strs[j]);
+        System.out.println(bucket2);
+
+        // Acum luam elementele de sus 
+        int[] result = new int[k];
+        // Stim ca lugimea array-ului este maximul de frecventa pe care il avem
+        for (int i = nums.length; i>0 ; i--) {
+            if(bucket2.containsKey(i)){
+                // aici punem intr un array elementele pt care avem frecventa respectiva , pt ca putem avea mai multe elemente cu aceiasi frecventa
+                List<Integer> list = bucket2.get(i);
+                for (Integer j: list) {
+                    result[--k]=j;
+                    if(k==0){
+                        return result;
+                    }
                 }
             }
+            
         }
 
 
 
 
-        System.out.println(map);
+
+
 
     }
-
-
-
 
 
 }
