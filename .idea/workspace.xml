@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f86d902-5b66-462f-a316-f285e9d97cf7" name="Changes" comment="i fucking did it !!!">
+    <list default="true" id="0f86d902-5b66-462f-a316-f285e9d97cf7" name="Changes" comment="347 Top K &#10;&#10;prima varainta cu 2 hashtable&#10;varianta mea a mers partial dar nu si pt mai multe elemente cu aceiasi frecventa ,&#10;explicatia : https://www.youtube.com/watch?v=a3vb_SQVQBo&amp;ab_channel=EricProgramming">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -57,7 +57,7 @@
       <workItem from="1676121618557" duration="6828000" />
       <workItem from="1676195445453" duration="4155000" />
       <workItem from="1676203806763" duration="132000" />
-      <workItem from="1676203949419" duration="16802000" />
+      <workItem from="1676203949419" duration="21073000" />
     </task>
     <task id="LOCAL-00001" summary="i fucking did it !!!">
       <created>1676208010458</created>
@@ -66,7 +66,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676208010459</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="347 Top K &#10;&#10;prima varainta cu 2 hashtable&#10;varianta mea a mers partial dar nu si pt mai multe elemente cu aceiasi frecventa ,&#10;explicatia : https://www.youtube.com/watch?v=a3vb_SQVQBo&amp;ab_channel=EricProgramming">
+      <created>1676240162022</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676240162023</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,6 +92,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="i fucking did it !!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="i fucking did it !!!" />
+    <MESSAGE value="347 Top K &#10;&#10;prima varainta cu 2 hashtable&#10;varianta mea a mers partial dar nu si pt mai multe elemente cu aceiasi frecventa ,&#10;explicatia : https://www.youtube.com/watch?v=a3vb_SQVQBo&amp;ab_channel=EricProgramming" />
+    <option name="LAST_COMMIT_MESSAGE" value="347 Top K &#10;&#10;prima varainta cu 2 hashtable&#10;varianta mea a mers partial dar nu si pt mai multe elemente cu aceiasi frecventa ,&#10;explicatia : https://www.youtube.com/watch?v=a3vb_SQVQBo&amp;ab_channel=EricProgramming" />
   </component>
 </project>
