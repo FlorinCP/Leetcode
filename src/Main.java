@@ -5,32 +5,29 @@ public class Main {
 
 
     public static void main(String[] args) {
-        int k=2;
-        int [] nums ={1,1,1,2,2,3};
-        int answer[] = new int[k];
-       HashMap<Integer,Integer> hashMap = new HashMap<>();
-       // hmap key -> numarul si value -> conut
-        // priority queue to sort , implementarea heap ului
-        PriorityQueue<Integer> pq = new PriorityQueue<>((a,b)->Integer.compare(hashMap.get(a),hashMap.get(b)));
+        int nums[] = {1,2,3,4};
 
-        // aici populam hm si get or Default e foarte jmekera metoda , daca e prima inserare pune 0 , daca nu valoarea precedenta +1
-        for (int i:nums) {
-            hashMap.put(i, hashMap.getOrDefault(i,0)+1);
+        int left_products[]=new int[nums.length];
+        int right_products[]= new int[nums.length];
+
+        int answer [] = new int[nums.length];
+        left_products[0]=1;
+        right_products[0]=1;
+
+        for (int i = 1; i < nums.length ; i++) {
+            left_products[i]=nums[i-1]*left_products[i-1];
         }
 
-        for (Integer i : hashMap.keySet()) {
-            pq.add(i);
-
-            if(pq.size()>k){
-                pq.poll();
-            }
+        for (int i = nums.length-2; i >=0; i--) {
+            right_products[i]=nums[i+1]*right_products[i+1];
         }
 
-        for (int i = 0; i < k; i++) {
-            answer[i] = pq.poll();
+        for (int i = 0; i < nums.length; i++) {
+            answer[i]=left_products[i]*right_products[i];
         }
+
 
     }
-
-
 }
+
+
