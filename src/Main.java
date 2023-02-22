@@ -3,31 +3,40 @@ import java.util.stream.Stream;
 
 public class Main {
 
-
     public static void main(String[] args) {
-        int nums[] = {1,2,3,4};
+        char [][] board ={
+//                {1,6,7,'.','.','.'},
+//                {2,5,8,'.','.','.'},
+//                {3,4,9,'.','.','.'},
+//                {4,3,10,'.','.','.'},
+//                {5,2,11,'.','.','.'},
+//                {6,1,12,'.','.','.'}
 
-        int left_products[]=new int[nums.length];
-        int right_products[]= new int[nums.length];
+        {5,3,'.','.',7,'.','.','.','.'},
+        {6,'.','.',1,9,5,'.','.','.'},
+        {'.',9,8,'.','.','.','.',6,'.'},
+        {8,'.','.','.',6,'.','.','.',3},
+        {4,'.','.',8,'.',3,'.','.',1},
+        {7,'.','.','.',2,'.','.','.',6},
+        {'.',6,'.','.','.','.',2,8,'.'},
+        {'.','.','.',4,1,9,'.','.',5},
+        {'.','.','.','.',8,'.','.',7,9}
+        };
+//                                    {1,9,4,'.','.','.','.','.','.'},
+//                                    {2,8,3,'.','.','.','.','.','.'},
+//                                    {3,7,2,'.','.','.','.','.','.'},
+//                                    {4,6,1,'.','.','.','.','.','.'},
+//                                    {5,4,9,'.','.','.','.','.','.'},
+//                                    {6,5,7,'.','.','.','.','.','.'},
+//                                    {7,3,8,'.','.','.','.','.','.'},
+//                                    {8,2,6,'.','.','.','.','.','.'},
+//                                    {9,1,5,'.','.','.','.','.','.'}};
 
-        int answer [] = new int[nums.length];
-        left_products[0]=1;
-        right_products[nums.length-1]=1;
 
-        for (int i = 1; i < nums.length ; i++) {
-            left_products[i]=nums[i-1]*left_products[i-1];
-        }
-
-        for (int i = nums.length-2; i >=0; i--) {
-            right_products[i]=nums[i+1]*right_products[i+1];
-        }
-
-        for (int i = 0; i < nums.length; i++) {
-            answer[i]=left_products[i]*right_products[i];
-        }
-
-
+        boolean answer = Function.isValidSudoku(board);
+        System.out.println(answer);
     }
+
 }
 
 
